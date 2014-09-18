@@ -18,5 +18,5 @@ A common repository of ruby version metadata.
 
 1. Add the new version to `versions.txt`.
 2. Replace the previous version in `stable.txt` with the new version.
-3. Add MD5 checksums for _all_ released files to `checksums.md5`.
-4. Add SHA1 checksums for _all_ released files to `checksums.sha1`.
+3. Append the MD5 checksums for _all_ released files to `checksums.md5`.
+4. Append the SHA1 checksums for _all_ released files to `checksums.sha1`.
