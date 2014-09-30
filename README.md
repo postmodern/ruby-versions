@@ -13,6 +13,10 @@ A common repository of ruby version metadata.
     released file.
   * `checksums.sha1` - a `sha1sum` compatible list of SHA1 checksums of every
     released file.
+  * `checksums.sha256` - a `sha256sum` compatible list of SHA256 checksums of every
+    released file.
+  * `checksums.sha512` - a `sha512sum` compatible list of SHA512 checksums of every
+    released file.
 
 ## Contributing
 
@@ -20,3 +24,5 @@ A common repository of ruby version metadata.
 2. Replace the previous version in `stable.txt` with the new version.
 3. Append the MD5 checksums for _all_ released files to `checksums.md5`.
 4. Append the SHA1 checksums for _all_ released files to `checksums.sha1`.
+5. Append the SHA256 checksums for _all_ released files to `checksums.sha256`.
+6. Append the SHA512 checksums for _all_ released files to `checksums.sha512`.
