@@ -8,3 +8,7 @@
 4. Append the SHA1 checksums for _all_ released files to `checksums.sha1`.
 5. Append the SHA256 checksums for _all_ released files to `checksums.sha256`.
 6. Append the SHA512 checksums for _all_ released files to `checksums.sha512`.
+
+* Never remove a version from `versions.txt`.
+* Never remove checksums from a `checksum.*` file. Unless the file is literally 
+  no longer available on the Internet.
