@@ -186,6 +186,8 @@ c08d94e93d9688fcf8bf0e9d9f053d876d3e3364  jruby-bin-9.0.3.0.tar.gz
 2f2548933c809548d2492a906c6dde7e94d6da32  jruby-bin-9.0.3.0.zip
 5a59b7d085af3025225d36ec2390027859ccc3a7  jruby-bin-9.0.4.0.tar.gz
 f92955547a412d7d01bc242508d639b4147e9cd4  jruby-bin-9.0.4.0.zip
+9369cfd8b19841eae2a764988121fc7d43b313b3  jruby-bin-9.0.5.0.tar.gz
+4b335ce7f0d54dcc4ed8dcb9febf00ac3bd8dcc4  jruby-bin-9.0.5.0.zip
 b117a01f6d3fc72fdf55905caed8e9dc334c09f4  jruby-src-1.0.0RC1.tar.gz
 52cf1af685f8c1d46850a8ecdff72baa33ba9fa6  jruby-src-1.0.0RC1.zip
 30d22b8beca4924be112573e15bb79565ab1d450  jruby-src-1.0.0RC2.tar.gz
@@ -374,3 +376,5 @@ a7c6bff3509be65731569b9700679b60063389ce  jruby-src-9.0.1.0.zip
 514853c5fc42ede7d33b30b9fd68d1b1e9a7bd4d  jruby-src-9.0.3.0.zip
 e0893eaa6c7fd9e1752fc6e5283ab6fefa17336b  jruby-src-9.0.4.0.tar.gz
 a44ca9b700aa41f19d9487576761693ce162b762  jruby-src-9.0.4.0.zip
+ba8c2db68dd47c800c715559bb3c3ba9fc681074  jruby-src-9.0.5.0.tar.gz
+df9a0a828e3071e2b6475bcfdbc5abe12477bc1c  jruby-src-9.0.5.0.zip
