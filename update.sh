@@ -3,7 +3,7 @@
 set -e
 
 if [[ ! $# -eq 2 ]]; then
-	echo "usage: $0 [ruby|mruby|jruby|rubinius] [VERSION]"
+	echo "usage: $0 [ruby|mruby|jruby|rubinius|truffleruby] [VERSION]"
 	exit -1
 fi
 
@@ -31,6 +31,11 @@ case "$ruby" in
 		exts=(tar.bz2)
 		downloads_url="http://releases.rubini.us/"
 		;;
+	truffleruby)
+		ruby="truffleruby"
+		exts=(linux-amd64.tar.gz macos-amd64.tar.gz)
+		downloads_url="https://github.com/oracle/truffleruby/releases/download/"
+		;;
 	*)
 		echo "$0: unknown ruby: $ruby" >&2
 		exit -1
@@ -57,6 +62,10 @@ for ext in "${exts[@]}"; do
 		rubinius)
 			archive="rubinius-${version}.${ext}"
 			url="$downloads_url/$archive"
+			;;
+		truffleruby)
+			archive="truffleruby-${version}-${ext}"
+			url="$downloads_url/vm-$version/$archive"
 			;;
 	esac
 
