@@ -64,7 +64,7 @@ for ext in "${exts[@]}"; do
 			url="$downloads_url/$archive"
 			;;
 		truffleruby)
-			archive="truffleruby-${version}.${ext}"
+			archive="truffleruby-${version}-${ext}"
 			url="$downloads_url/vm-$version/$archive"
 			;;
 	esac
