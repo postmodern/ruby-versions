@@ -137,3 +137,4 @@
 2.6.0-preview1
 2.6.0-preview2
 2.6.0-preview3
+2.6.0-rc1
