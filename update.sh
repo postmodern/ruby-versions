@@ -78,4 +78,10 @@ done
 
 echo "$version" >> "../$ruby/versions.txt"
 
+case "$ruby" in
+	truffleruby)
+		echo "$version" > "../$ruby/stable.txt"
+		;;
+esac
+
 popd >/dev/null
