@@ -1,5 +1,7 @@
 # Contributing
 
+Use `update.sh`, or manually do the following:
+
 1. Add the new version to `versions.txt`.
   * Versions should be listed incrementally.
 2. Add new _stable_ versions to `stable.txt`, replacing any previous stable version for that version family.
@@ -10,5 +12,5 @@
 6. Append the SHA512 checksums for _all_ released files to `checksums.sha512`.
 
 * Never remove a version from `versions.txt`.
-* Never remove checksums from a `checksum.*` file. Unless the file is literally 
+* Never remove checksums from a `checksum.*` file. Unless the file is literally
   no longer available on the Internet.
