@@ -16,7 +16,7 @@ case "$ruby" in
 		version_family="${version:0:3}"
 
 		exts=(tar.gz tar.bz2 tar.xz zip)
-		downloads_url="http://cache.ruby-lang.org/pub/ruby"
+		downloads_url="https://cache.ruby-lang.org/pub/ruby"
 		;;
 	mruby)
 		exts=(tar.gz zip)
