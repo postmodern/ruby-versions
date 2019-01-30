@@ -16,15 +16,15 @@ case "$ruby" in
 		version_family="${version:0:3}"
 
 		exts=(tar.gz tar.bz2 tar.xz zip)
-		downloads_url="http://cache.ruby-lang.org/pub/ruby/"
+		downloads_url="http://cache.ruby-lang.org/pub/ruby"
 		;;
 	mruby)
 		exts=(tar.gz zip)
-		downloads_url="https://github.com/mruby/mruby/archive/"
+		downloads_url="https://github.com/mruby/mruby/archive"
 		;;
 	jruby)
 		exts=(tar.gz zip)
-		downloads_url="https://s3.amazonaws.com/jruby.org/downloads/"
+		downloads_url="https://s3.amazonaws.com/jruby.org/downloads"
 		;;
 	rubinius)
 		exts=(tar.bz2)
@@ -33,7 +33,7 @@ case "$ruby" in
 	truffleruby)
 		ruby="truffleruby"
 		exts=(linux-amd64.tar.gz macos-amd64.tar.gz)
-		downloads_url="https://github.com/oracle/truffleruby/releases/download/"
+		downloads_url="https://github.com/oracle/truffleruby/releases/download"
 		;;
 	*)
 		echo "$0: unknown ruby: $ruby" >&2
