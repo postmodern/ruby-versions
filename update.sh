@@ -27,9 +27,8 @@ case "$ruby" in
 		downloads_url="https://s3.amazonaws.com/jruby.org/downloads/"
 		;;
 	rubinius)
-		ruby="rbx"
 		exts=(tar.bz2)
-		downloads_url="http://releases.rubini.us/"
+		downloads_url="https://rubinius-releases-rubinius-com.s3.amazonaws.com"
 		;;
 	truffleruby)
 		ruby="truffleruby"
