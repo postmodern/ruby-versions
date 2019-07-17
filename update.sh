@@ -76,10 +76,8 @@ done
 
 echo "$version" >> "../$ruby/versions.txt"
 
-case "$ruby" in
-	truffleruby)
-		echo "$version" > "../$ruby/stable.txt"
-		;;
-esac
+if [[ $(wc -l < "../$ruby/stable.txt") == "1" ]]; then
+	echo "$version" > "../$ruby/stable.txt"
+fi
 
 popd >/dev/null
