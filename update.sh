@@ -4,7 +4,7 @@ set -e
 
 if [[ ! $# -eq 2 ]]; then
 	echo "usage: $0 [ruby|mruby|jruby|rubinius|truffleruby] [VERSION]"
-	exit -1
+	exit 1
 fi
 
 ruby="$1"
@@ -36,7 +36,7 @@ case "$ruby" in
 		;;
 	*)
 		echo "$0: unknown ruby: $ruby" >&2
-		exit -1
+		exit 1
 		;;
 esac
 
