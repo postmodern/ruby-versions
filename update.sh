@@ -67,7 +67,11 @@ for ext in "${exts[@]}"; do
 			;;
 	esac
 
-	wget -O "$archive" "$url"
+	if [ -f "$archive" ]; then
+		echo "Already downloaded $archive"
+	else
+		wget -O "$archive" "$url"
+	fi
 
 	for algorithm in md5 sha1 sha256 sha512; do
 		${algorithm}sum "$archive" >> "../$ruby/checksums.$algorithm"
