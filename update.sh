@@ -82,6 +82,8 @@ echo "$version" >> "../$ruby/versions.txt"
 
 if [[ $(wc -l < "../$ruby/stable.txt") == "1" ]]; then
 	echo "$version" > "../$ruby/stable.txt"
+else
+	echo "Please update $ruby/stable.txt manually"
 fi
 
 popd >/dev/null
