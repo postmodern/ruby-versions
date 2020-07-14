@@ -3,7 +3,7 @@
 set -e
 
 if [[ ! $# -eq 2 ]]; then
-	echo "usage: $0 [ruby|mruby|jruby|rubinius|truffleruby] [VERSION]"
+	echo "usage: $0 [ruby|mruby|jruby|rubinius|truffleruby|graalvm] [VERSION]"
 	exit 1
 fi
 
@@ -34,6 +34,10 @@ case "$ruby" in
 		exts=(linux-amd64.tar.gz macos-amd64.tar.gz)
 		downloads_url="https://github.com/oracle/truffleruby/releases/download"
 		;;
+	graalvm)
+		exts=(linux-amd64 darwin-amd64)
+		downloads_url="https://github.com/graalvm/graalvm-ce-builds/releases/download"
+		;;
 	*)
 		echo "$0: unknown ruby: $ruby" >&2
 		exit 1
@@ -63,6 +67,10 @@ for ext in "${exts[@]}"; do
 			;;
 		truffleruby)
 			archive="truffleruby-${version}-${ext}"
+			url="$downloads_url/vm-$version/$archive"
+			;;
+		graalvm)
+			archive="graalvm-ce-java8-${ext}-${version}.tar.gz"
 			url="$downloads_url/vm-$version/$archive"
 			;;
 	esac
