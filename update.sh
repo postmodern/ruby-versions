@@ -70,7 +70,7 @@ for ext in "${exts[@]}"; do
 			url="$downloads_url/vm-$version/$archive"
 			;;
 		truffleruby-graalvm)
-			archive="graalvm-ce-java8-${ext}-${version}.tar.gz"
+			archive="graalvm-ce-java11-${ext}-${version}.tar.gz"
 			url="$downloads_url/vm-$version/$archive"
 			;;
 	esac
