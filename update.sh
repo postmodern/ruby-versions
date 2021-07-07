@@ -13,9 +13,15 @@ dest="pkg"
 
 case "$ruby" in
 	ruby)
+		version_major="${version:0:1}"
 		version_family="${version:0:3}"
 
-		exts=(tar.gz tar.xz zip)
+		if [[ "$version_major" == "2" ]]; then
+			exts=(tar.bz2 tar.gz tar.xz zip)
+		else
+			exts=(tar.gz tar.xz zip)
+		fi
+
 		downloads_url="https://cache.ruby-lang.org/pub/ruby"
 		;;
 	mruby)
