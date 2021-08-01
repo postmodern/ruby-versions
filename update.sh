@@ -37,7 +37,7 @@ case "$ruby" in
 		downloads_url="https://rubinius-releases-rubinius-com.s3.amazonaws.com"
 		;;
 	truffleruby)
-		exts=(linux-amd64.tar.gz macos-amd64.tar.gz)
+		exts=(linux-amd64 linux-aarch64 macos-amd64)
 		downloads_url="https://github.com/oracle/truffleruby/releases/download"
 		;;
 	truffleruby-graalvm)
@@ -72,7 +72,7 @@ for ext in "${exts[@]}"; do
 			url="$downloads_url/$archive"
 			;;
 		truffleruby)
-			archive="truffleruby-${version}-${ext}"
+			archive="truffleruby-${version}-${ext}.tar.gz"
 			url="$downloads_url/vm-$version/$archive"
 			;;
 		truffleruby-graalvm)
