@@ -30,7 +30,7 @@ case "$ruby" in
 		;;
 	jruby)
 		exts=(tar.gz zip)
-		downloads_url="https://s3.amazonaws.com/jruby.org/downloads"
+		downloads_url="https://repo1.maven.org/maven2/org/jruby/jruby-dist"
 		;;
 	rubinius)
 		exts=(tar.bz2)
@@ -64,7 +64,7 @@ for ext in "${exts[@]}"; do
 			url="$downloads_url/$version/$archive"
 			;;
 		jruby)
-			archive="jruby-bin-${version}.${ext}"
+			archive="jruby-dist-${version}-bin.${ext}"
 			url="$downloads_url/$version/$archive"
 			;;
 		rubinius)
