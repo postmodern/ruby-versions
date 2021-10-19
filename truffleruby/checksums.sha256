@@ -58,3 +58,6 @@ c1eeb3692200c812329fa50c506dcb0ff246e7fb7780cd661fce2227fe507be1  truffleruby-21
 288c8af3ee161677298f1571ee340c2f34dd2bb02a47549177ae0900f66511be  truffleruby-21.2.0.1-linux-amd64.tar.gz
 ddaf53a9921d2a5b5151300c30848519db2a3f9f146f47d4d883ccbbad6cab08  truffleruby-21.2.0.1-linux-aarch64.tar.gz
 beee953c06a3eabe37ab227dde5dacd2d0f60e941fa93189ced77395e864f50d  truffleruby-21.2.0.1-macos-amd64.tar.gz
+d439f741deaff47a9564c70b737c96176b1aa88cf79a5b139e18fd5480c61079  truffleruby-21.3.0-linux-amd64.tar.gz
+110298de4743abf156314fb06011cb2f92c52b6ee2ef4cbb8b28ff1933672940  truffleruby-21.3.0-linux-aarch64.tar.gz
+3ca0c851386d872239404d41c69f1ba738332eb25da6cf89e157fa1356e68de0  truffleruby-21.3.0-macos-amd64.tar.gz
