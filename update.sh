@@ -81,7 +81,7 @@ for ext in "${exts[@]}"; do
 			;;
 	esac
 
-	if [ -f "$archive" ]; then
+	if [ -s "$archive" ]; then
 		echo "Already downloaded $archive"
 	else
 		wget -O "$archive" "$url"
