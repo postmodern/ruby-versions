@@ -37,11 +37,11 @@ case "$ruby" in
 		downloads_url="https://rubinius-releases-rubinius-com.s3.amazonaws.com"
 		;;
 	truffleruby)
-		exts=(linux-amd64 linux-aarch64 macos-amd64)
+		exts=(linux-amd64 linux-aarch64 macos-amd64 macos-aarch64)
 		downloads_url="https://github.com/oracle/truffleruby/releases/download"
 		;;
 	truffleruby-graalvm)
-		exts=(linux-amd64 linux-aarch64 darwin-amd64)
+		exts=(linux-amd64 linux-aarch64 darwin-amd64 darwin-aarch64)
 		downloads_url="https://github.com/graalvm/graalvm-ce-builds/releases/download"
 		;;
 	*)
