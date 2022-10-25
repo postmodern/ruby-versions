@@ -71,3 +71,7 @@ d2bd5875aa0359039b09f0772ad775f82988bebc757269c25729d38029ec0a63  truffleruby-22
 8c898b7d847bdff78ac587b0afe7deccbfae46ca1dbd8cf05a8d572e8a059c48  truffleruby-22.2.0-linux-aarch64.tar.gz
 c3190570643c09d5a437a4cc5f2f0e51a9a11da1d94a07a1f5abfbf9dacc0643  truffleruby-22.2.0-macos-amd64.tar.gz
 9551ffa608c2fa4c1af74c2c5b9f88256a54c477e46ead4b70056f1f18d0e1f9  truffleruby-22.2.0-macos-aarch64.tar.gz
+fe8c2b2335d27cc1728d9bfbc75fedca0241387ddae4efce3229513fba72d206  truffleruby-22.3.0-linux-amd64.tar.gz
+d05d882a6057f2cb2e46bf209dad7182af9096600b44be0270cca6a0d5fc683c  truffleruby-22.3.0-linux-aarch64.tar.gz
+b6243d0ef963f8f8e9b7c01dba7b318e64e3b83da8934913a4bfdcfb36c95d92  truffleruby-22.3.0-macos-amd64.tar.gz
+cebf48f9bddb4b0829313f12aa94bbeb41aff4c121f723e290709098296a68eb  truffleruby-22.3.0-macos-aarch64.tar.gz

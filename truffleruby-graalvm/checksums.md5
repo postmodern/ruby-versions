@@ -24,3 +24,7 @@ c119ed274f352af8aef8bd4e1faaaf55  graalvm-ce-java11-darwin-amd64-22.1.0.tar.gz
 e1e5fc2cb5e521bb38c7ff7adfbe7d7c  graalvm-ce-java11-linux-aarch64-22.2.0.tar.gz
 9dc83938e4201d44e75769d0a0a64386  graalvm-ce-java11-darwin-amd64-22.2.0.tar.gz
 79e818baf978324efd559ea20219a476  graalvm-ce-java11-darwin-aarch64-22.2.0.tar.gz
+176480a02899aa6d13220c64a8931c57  graalvm-ce-java11-linux-amd64-22.3.0.tar.gz
+f5825ddf9b27db577868ec334841a542  graalvm-ce-java11-linux-aarch64-22.3.0.tar.gz
+8f7e1a7b3a716f9e04a2bd126936b4ac  graalvm-ce-java11-darwin-amd64-22.3.0.tar.gz
+77e3b36d7259ed24c15f08e8b749a320  graalvm-ce-java11-darwin-aarch64-22.3.0.tar.gz
