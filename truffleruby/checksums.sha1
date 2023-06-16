@@ -83,3 +83,7 @@ bbf9788ffe3ce8104a5f1859d24f8109780676e0  truffleruby-23.0.0-preview1-linux-amd6
 8d1d19c42b7f9930db0a27a1b046bede0247dc7a  truffleruby-23.0.0-preview1-linux-aarch64.tar.gz
 07ea408201a7598d4c4e8e197d8b6e0123f9821d  truffleruby-23.0.0-preview1-macos-amd64.tar.gz
 841b5d394daee7d7949f6537a06cc67730e5eaaa  truffleruby-23.0.0-preview1-macos-aarch64.tar.gz
+d4c2fa5bdf587fb8390411dc46c88d0bc32e92e4  truffleruby-23.0.0-linux-amd64.tar.gz
+516bb84350c6238d74779f46f401327f89cb7fb8  truffleruby-23.0.0-linux-aarch64.tar.gz
+c71d011fdc2ee8e2a465e689f517ce4bb7302d83  truffleruby-23.0.0-macos-amd64.tar.gz
+b3e88f657f2256f22ef4912376be92a677e3abbe  truffleruby-23.0.0-macos-aarch64.tar.gz
