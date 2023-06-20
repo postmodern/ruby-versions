@@ -32,3 +32,7 @@ c8cebf24640932bbafb6cb622115bb070fb2af2d  graalvm-ce-java11-darwin-amd64-22.3.0.
 cb779e0a49f2a958b76e43470ca0a5ad87a8ff91  graalvm-ce-java11-linux-aarch64-22.3.1.tar.gz
 4ebcb0e23a9228b68836112ade0d29aa7d469f45  graalvm-ce-java11-darwin-amd64-22.3.1.tar.gz
 f274d7383f691f80c1d27654fdaff0ea1bd8ed8f  graalvm-ce-java11-darwin-aarch64-22.3.1.tar.gz
+a0814ffbba32cfb95163b92c96a684d5eaadf08d  graalvm-jdk-17.0.7_linux-x64_bin.tar.gz
+f70e020f8575478f880fffaa2e180bff866a8402  graalvm-jdk-17.0.7_linux-aarch64_bin.tar.gz
+1a69fd00211a64261770269aa4deaae7c43f3c2d  graalvm-jdk-17.0.7_macos-x64_bin.tar.gz
+b87563454be786b9bf5cfac2a0e8ec8f7b8f9f2e  graalvm-jdk-17.0.7_macos-aarch64_bin.tar.gz

@@ -2,14 +2,14 @@
 
 set -e
 
-if [[ ! $# -eq 2 ]]; then
-	echo "usage: $0 [ruby|mruby|jruby|rubinius|truffleruby|truffleruby-graalvm] [VERSION]"
+if [[ $# -lt 2 ]]; then
+	echo "usage: $0 [ruby|mruby|jruby|rubinius|truffleruby|truffleruby-graalvm] [VERSION] [RELEASE_DIRECTORY]"
 	exit 1
 fi
 
 ruby="$1"
 version="$2"
-dest="pkg"
+dest="${3:-pkg}"
 
 case "$ruby" in
 	ruby)
@@ -41,7 +41,7 @@ case "$ruby" in
 		downloads_url="https://github.com/oracle/truffleruby/releases/download"
 		;;
 	truffleruby-graalvm)
-		exts=(linux-amd64 linux-aarch64 darwin-amd64 darwin-aarch64)
+		exts=(linux-x64 linux-aarch64 macos-x64 macos-aarch64)
 		downloads_url="https://github.com/graalvm/graalvm-ce-builds/releases/download"
 		;;
 	*)
@@ -51,7 +51,6 @@ case "$ruby" in
 esac
 
 mkdir -p "$dest"
-pushd "$dest" >/dev/null
 
 for ext in "${exts[@]}"; do
 	case "$ruby" in
@@ -76,28 +75,28 @@ for ext in "${exts[@]}"; do
 			url="$downloads_url/vm-$version/$archive"
 			;;
 		truffleruby-graalvm)
-			archive="graalvm-ce-java11-${ext}-${version}.tar.gz"
+			archive="graalvm-jdk-17.0.7_${ext}_bin.tar.gz"
 			url="$downloads_url/vm-$version/$archive"
 			;;
 	esac
 
+	pushd "$dest" >/dev/null
 	if [ -s "$archive" ]; then
 		echo "Already downloaded $archive"
 	else
 		wget -O "$archive" "$url"
 	fi
+	popd >/dev/null
 
 	for algorithm in md5 sha1 sha256 sha512; do
-		${algorithm}sum "$archive" >> "../$ruby/checksums.$algorithm"
+		${algorithm}sum "$dest/$archive" >> "$ruby/checksums.$algorithm"
 	done
 done
 
-echo "$version" >> "../$ruby/versions.txt"
+echo "$version" >> "$ruby/versions.txt"
 
-if [[ $(wc -l < "../$ruby/stable.txt") == "1" ]]; then
-	echo "$version" > "../$ruby/stable.txt"
+if [[ $(wc -l < "$ruby/stable.txt") == "1" ]]; then
+	echo "$version" > "$ruby/stable.txt"
 else
 	echo "Please update $ruby/stable.txt manually"
 fi
-
-popd >/dev/null
