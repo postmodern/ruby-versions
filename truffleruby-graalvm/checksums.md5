@@ -36,3 +36,7 @@ c177441db57a1586b919d09a86d5f533  graalvm-ce-java11-darwin-aarch64-22.3.1.tar.gz
 564a965fef199a950f6f503478848cbc  graalvm-jdk-17.0.7_linux-aarch64_bin.tar.gz
 5d3dede1fcb8876082977681565318a6  graalvm-jdk-17.0.7_macos-x64_bin.tar.gz
 58b3214c91f77cd95d75077401216cde  graalvm-jdk-17.0.7_macos-aarch64_bin.tar.gz
+9cf05967a26f3dbadd9f02fd83fcccae  truffleruby-jvm-23.1.0-linux-amd64.tar.gz
+0597e44b43c76b782fc40140dc33408c  truffleruby-jvm-23.1.0-linux-aarch64.tar.gz
+43496ecae611385d54650291da7caaf6  truffleruby-jvm-23.1.0-macos-amd64.tar.gz
+5343064c3031b1453e234bb4cdd682d3  truffleruby-jvm-23.1.0-macos-aarch64.tar.gz

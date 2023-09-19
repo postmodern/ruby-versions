@@ -36,13 +36,9 @@ case "$ruby" in
 		exts=(tar.bz2)
 		downloads_url="https://rubinius-releases-rubinius-com.s3.amazonaws.com"
 		;;
-	truffleruby)
+	truffleruby|truffleruby-graalvm)
 		exts=(linux-amd64 linux-aarch64 macos-amd64 macos-aarch64)
 		downloads_url="https://github.com/oracle/truffleruby/releases/download"
-		;;
-	truffleruby-graalvm)
-		exts=(linux-x64 linux-aarch64 macos-x64 macos-aarch64)
-		downloads_url="https://github.com/graalvm/graalvm-ce-builds/releases/download"
 		;;
 	*)
 		echo "$0: unknown ruby: $ruby" >&2
@@ -72,25 +68,26 @@ for ext in "${exts[@]}"; do
 			;;
 		truffleruby)
 			archive="truffleruby-${version}-${ext}.tar.gz"
-			url="$downloads_url/vm-$version/$archive"
+			url="$downloads_url/graal-$version/$archive"
 			;;
 		truffleruby-graalvm)
-			archive="graalvm-jdk-17.0.7_${ext}_bin.tar.gz"
-			url="$downloads_url/vm-$version/$archive"
+			archive="truffleruby-jvm-${version}-${ext}.tar.gz"
+			url="$downloads_url/graal-$version/$archive"
 			;;
 	esac
 
+	cwd=$(pwd)
 	pushd "$dest" >/dev/null
 	if [ -s "$archive" ]; then
 		echo "Already downloaded $archive"
 	else
 		wget -O "$archive" "$url"
 	fi
-	popd >/dev/null
 
 	for algorithm in md5 sha1 sha256 sha512; do
-		${algorithm}sum "$dest/$archive" >> "$ruby/checksums.$algorithm"
+		${algorithm}sum "$archive" >> "$cwd/$ruby/checksums.$algorithm"
 	done
+	popd >/dev/null
 done
 
 echo "$version" >> "$ruby/versions.txt"
