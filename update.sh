@@ -116,8 +116,22 @@ sed 's/^\([0-9][^-]*\)$/\1-zzzzzz/' "$ruby/versions.txt" \
 > "$ruby/versions.txt.tmp"
 mv "$ruby/versions.txt.tmp" "$ruby/versions.txt"
 
-if [[ $(wc -l < "$ruby/stable.txt") == "1" ]]; then
-	echo "$version" > "$ruby/stable.txt"
+if [[ -f "$ruby/stable.txt" ]]; then
+	stable_file="$ruby/stable.txt"
+	version_family="${version%.*}" # Extract major.minor from version (e.g., 3.3)
+
+	# Use sed to replace the version for the major.minor family or append it if not found
+	if grep -qE "^${version_family}\." "$stable_file"; then
+		sed -i '' -E "s/^(${version_family}\.).*/$version/" "$stable_file"
+		echo "Updated $stable_file to $version"
+	else
+		echo "$version" >> "$stable_file"
+		echo "Appended $version to $stable_file"
+	fi
+
+	# Sort and remove duplicates
+	sort -u -o "$stable_file" "$stable_file"
 else
-	echo "Please update $ruby/stable.txt manually"
+	echo "$version" > "$ruby/stable.txt"
+	echo "Created $ruby/stable.txt with $version."
 fi
