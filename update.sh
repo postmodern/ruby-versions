@@ -85,7 +85,14 @@ for ext in "${exts[@]}"; do
 	fi
 
 	for algorithm in md5 sha1 sha256 sha512; do
-		${algorithm}sum "$archive" >> "$cwd/$ruby/checksums.$algorithm"
+		# 1) Append the new checksum line
+		"${algorithm}sum" "$archive" >> "$cwd/$ruby/checksums.$algorithm"
+
+		# 2) Remove duplicates (keeping the first occurrence) without sorting
+		awk '!seen[$0]++' "$cwd/$ruby/checksums.$algorithm" \
+			> "$cwd/$ruby/checksums.$algorithm.tmp"
+
+		mv "$cwd/$ruby/checksums.$algorithm.tmp" "$cwd/$ruby/checksums.$algorithm"
 	done
 	popd >/dev/null
 done
