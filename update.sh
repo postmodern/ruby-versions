@@ -97,7 +97,24 @@ for ext in "${exts[@]}"; do
 	popd >/dev/null
 done
 
+# This script appends a new version to versions.txt and ensures it remains sorted.
+# Steps:
+# 1. Append the new version to versions.txt.
+# 2. Temporarily transform stable versions (those with no dash, e.g., "3.0.0")
+#    by appending "-zzzzzz". This ensures they sort *after* any lines containing
+#    suffixes like "-preview", "-rc", or "-pXYZ".
+# 3. Sort the file uniquely (-u) with "-" as the field separator (-t-):
+#    -k1,1V sorts the main version (e.g., "3.0.0") as a version,
+#    -k2,2V sorts suffixes (e.g., "preview1", "rc2") as versions,
+#    so the transformed stable lines appear last in their version group.
+# 4. Remove the temporary "-zzzzzz" suffix from stable versions.
+# 5. Replace the original file with the sorted result.
 echo "$version" >> "$ruby/versions.txt"
+sed 's/^\([0-9][^-]*\)$/\1-zzzzzz/' "$ruby/versions.txt" \
+| sort -u -t- -k1,1V -k2,2V \
+| sed 's/-zzzzzz$//' \
+> "$ruby/versions.txt.tmp"
+mv "$ruby/versions.txt.tmp" "$ruby/versions.txt"
 
 if [[ $(wc -l < "$ruby/stable.txt") == "1" ]]; then
 	echo "$version" > "$ruby/stable.txt"
