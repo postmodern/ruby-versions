@@ -48,6 +48,7 @@ esac
 
 mkdir -p "$dest"
 
+# Update the checksums.* files
 for ext in "${exts[@]}"; do
 	case "$ruby" in
 		ruby)
@@ -90,8 +91,10 @@ for ext in "${exts[@]}"; do
 	popd >/dev/null
 done
 
+# Update the versions.txt file
 echo "$version" >> "$ruby/versions.txt"
 
+# Update the stable.txt file
 if [[ $(wc -l < "$ruby/stable.txt") == "1" ]]; then
 	echo "$version" > "$ruby/stable.txt"
 else
