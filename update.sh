@@ -130,5 +130,5 @@ if [[ -f "$ruby/stable.txt" ]]; then
 	fi
 else
 	echo "$version" > "$ruby/stable.txt"
-	echo "Created $ruby/stable.txt with $version."
+	echo "Created $ruby/stable.txt with $version"
 fi
