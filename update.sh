@@ -11,11 +11,11 @@ ruby="$1"
 version="$2"
 dest="${3:-pkg}"
 
+version_major="${version%%.*}" # Extract major from version (e.g., 3)
+version_family="${version%.*}" # Extract major.minor from version (e.g., 3.3)
+
 case "$ruby" in
 	ruby)
-		version_major="${version:0:1}"
-		version_family="${version:0:3}"
-
 		if [[ "$version_major" == "2" ]]; then
 			exts=(tar.bz2 tar.gz tar.xz zip)
 		else
@@ -118,7 +118,6 @@ mv "$ruby/versions.txt.tmp" "$ruby/versions.txt"
 
 if [[ -f "$ruby/stable.txt" ]]; then
 	stable_file="$ruby/stable.txt"
-	version_family="${version%.*}" # Extract major.minor from version (e.g., 3.3)
 
 	# Use sed to replace the version for the major.minor family or append it if not found
 	if grep -qE "^${version_family}\." "$stable_file"; then
