@@ -128,9 +128,6 @@ if [[ -f "$ruby/stable.txt" ]]; then
 		echo "$version" >> "$stable_file"
 		echo "Appended $version to $stable_file"
 	fi
-
-	# Sort and remove duplicates
-	sort -u -o "$stable_file" "$stable_file"
 else
 	echo "$version" > "$ruby/stable.txt"
 	echo "Created $ruby/stable.txt with $version."
