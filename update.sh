@@ -11,11 +11,11 @@ ruby="$1"
 version="$2"
 dest="${3:-pkg}"
 
+version_major="${version%%.*}" # Extract major from version (e.g., 3)
+version_family="${version%.*}" # Extract major.minor from version (e.g., 3.3)
+
 case "$ruby" in
 	ruby)
-		version_major="${version:0:1}"
-		version_family="${version:0:3}"
-
 		if [[ "$version_major" == "2" ]]; then
 			exts=(tar.bz2 tar.gz tar.xz zip)
 		else
@@ -85,15 +85,49 @@ for ext in "${exts[@]}"; do
 	fi
 
 	for algorithm in md5 sha1 sha256 sha512; do
-		${algorithm}sum "$archive" >> "$cwd/$ruby/checksums.$algorithm"
+		# 1) Append the new checksum line
+		"${algorithm}sum" "$archive" >> "$cwd/$ruby/checksums.$algorithm"
+
+		# 2) Remove duplicates (keeping the first occurrence) without sorting
+		awk '!seen[$0]++' "$cwd/$ruby/checksums.$algorithm" \
+			> "$cwd/$ruby/checksums.$algorithm.tmp"
+
+		mv "$cwd/$ruby/checksums.$algorithm.tmp" "$cwd/$ruby/checksums.$algorithm"
 	done
 	popd >/dev/null
 done
 
+# This script appends a new version to versions.txt and ensures it remains sorted.
+# Steps:
+# 1. Append the new version to versions.txt.
+# 2. Temporarily transform stable versions (those with no dash, e.g., "3.0.0")
+#    by appending "-zzzzzz". This ensures they sort *after* any lines containing
+#    suffixes like "-preview", "-rc", or "-pXYZ".
+# 3. Sort the file uniquely (-u) with "-" as the field separator (-t-):
+#    -k1,1V sorts the main version (e.g., "3.0.0") as a version,
+#    -k2,2V sorts suffixes (e.g., "preview1", "rc2") as versions,
+#    so the transformed stable lines appear last in their version group.
+# 4. Remove the temporary "-zzzzzz" suffix from stable versions.
+# 5. Replace the original file with the sorted result.
 echo "$version" >> "$ruby/versions.txt"
+sed 's/^\([0-9][^-]*\)$/\1-zzzzzz/' "$ruby/versions.txt" \
+| sort -u -t- -k1,1V -k2,2V \
+| sed 's/-zzzzzz$//' \
+> "$ruby/versions.txt.tmp"
+mv "$ruby/versions.txt.tmp" "$ruby/versions.txt"
 
-if [[ $(wc -l < "$ruby/stable.txt") == "1" ]]; then
-	echo "$version" > "$ruby/stable.txt"
+if [[ -f "$ruby/stable.txt" ]]; then
+	stable_file="$ruby/stable.txt"
+
+	# Use sed to replace the version for the major.minor family or append it if not found
+	if grep -qE "^${version_family}\." "$stable_file"; then
+		sed -i '' -E "s/^(${version_family}\.).*/$version/" "$stable_file"
+		echo "Updated $stable_file to $version"
+	else
+		echo "$version" >> "$stable_file"
+		echo "Appended $version to $stable_file"
+	fi
 else
-	echo "Please update $ruby/stable.txt manually"
+	echo "$version" > "$ruby/stable.txt"
+	echo "Created $ruby/stable.txt with $version"
 fi
