@@ -748,5 +748,10 @@ b9752d599816fc653f29d936091bbbd14546b5ccd09ab357a6fa5b2c0e3f3b3d  jruby-dist-9.4
 63b8cf2cf901ccbfc30a8dce563c96ce1747b677c7673b52ba29db621b95381f  jruby-dist-9.4.9.0-bin.zip
 0b325bb6e64896dfcf235bbc6506ca9b5af78f1c8fec7f048bc4188b1793b5e0  jruby-dist-9.4.10.0-bin.tar.gz
 9818ba692d9e2ce83735f6019c24495f77bad987ac081a3c2ef9da5018d98d3c  jruby-dist-9.4.10.0-bin.zip
+<<<<<<< Updated upstream
 cf4067bdc3a6ab518c786588e2486adc047b9cea0b96a43218b03ac651d26e11  jruby-dist-9.4.11.0-bin.tar.gz
 cd6a4dc392a9e98dbb855ea2e2c14a9369ba04741e30c9660f9a61f200b72bb9  jruby-dist-9.4.11.0-bin.zip
+=======
+05c5d203d6990c92671cc42f57d2fa1c1083bbfd16fa7023dc5848cdb8f0aa2e  jruby-dist-9.4.12.0-bin.tar.gz
+47c328248e160a28064af23499d6f98d1fe8041c864d33f89d3e66ac5a4d0895  jruby-dist-9.4.12.0-bin.zip
+>>>>>>> Stashed changes
