@@ -742,6 +742,9 @@ fa9bd65bc429a43a3e6dda8ff0b97022  ruby-3.2.6.tar.gz
 51bcf91da64e5889e2e59c7adc7189c5  ruby-3.3.6.tar.gz
 f5eb601e5c8b37ee8169b82fb528b821  ruby-3.3.6.tar.xz
 df30f96b9512838f95b12a402368a801  ruby-3.3.6.zip
+5fa3e653657d868e2c8377d2f3adb335  ruby-3.3.7.tar.gz
+bd4c439ae576f6f6b91d4dac3e619e62  ruby-3.3.7.tar.xz
+e0e199989c971abd88e994f795cb8972  ruby-3.3.7.zip
 8c0da18adbb03df588cb124fbfa3325e  ruby-3.4.0-rc1.tar.gz
 2993f2582dfce0f078e982924bb37e8f  ruby-3.4.0-rc1.tar.xz
 4d5532b0d348cf65e5876a909a183377  ruby-3.4.0-rc1.zip
@@ -751,6 +754,6 @@ d5ed7088fb555edba17fe7c8cfcbb5a7  ruby-3.4.0.tar.xz
 43e587b9a6de2a51dd1fa2613615542b  ruby-3.4.1.tar.gz
 45bf4f2706ee6d07133f3355e581f920  ruby-3.4.1.tar.xz
 b8f4919bbe640c86dd22cac156bf6ae8  ruby-3.4.1.zip
-5fa3e653657d868e2c8377d2f3adb335  ruby-3.3.7.tar.gz
-bd4c439ae576f6f6b91d4dac3e619e62  ruby-3.3.7.tar.xz
-e0e199989c971abd88e994f795cb8972  ruby-3.3.7.zip
+120907785ecc0a84521e924cbda66af9  ruby-3.4.2.tar.gz
+63a56b170246fcf0198a5eaba57dd46c  ruby-3.4.2.tar.xz
+260e8535ca50c6b148e78b1ba53971b7  ruby-3.4.2.zip
