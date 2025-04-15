@@ -11,6 +11,11 @@ ruby="$1"
 version="$2"
 dest="${3:-pkg}"
 
+if grep -x "$version" "$ruby/versions.txt" >/dev/null; then
+	echo "$0: $ruby version $version has already been added!" >&2
+	exit 2
+fi
+
 case "$ruby" in
 	ruby)
 		version_major="${version:0:1}"
