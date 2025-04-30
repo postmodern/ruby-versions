@@ -76,3 +76,7 @@ c1cc145a40ec9368714ec79144180752  truffleruby-jvm-24.1.2-linux-aarch64.tar.gz
 99ee82d88533c108c41779056ed1cb1d  truffleruby-jvm-24.2.0-linux-aarch64.tar.gz
 7fe145be09b7fc2aae0c904469a4d911  truffleruby-jvm-24.2.0-macos-amd64.tar.gz
 9db7a28a8489d7945513ea2403ab37c1  truffleruby-jvm-24.2.0-macos-aarch64.tar.gz
+00edcba6931fbc4e864a0e697f69f65a  truffleruby-jvm-24.2.1-linux-amd64.tar.gz
+7915deb8ce37dcb946fa42c05203dd30  truffleruby-jvm-24.2.1-linux-aarch64.tar.gz
+1c210ad8e213dd1211127aab87620d88  truffleruby-jvm-24.2.1-macos-amd64.tar.gz
+28ae2e3064ccdb6255b2d00c07768b46  truffleruby-jvm-24.2.1-macos-aarch64.tar.gz
