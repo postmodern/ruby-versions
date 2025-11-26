@@ -30,9 +30,7 @@ $ ./update.sh ruby 3.3.10
 
 ### Automated Syncing (sync_releases.sh)
 
-The `sync_releases.sh` script provides a way to automatically find and add all missing stable releases for a given implementation.
-
-It currently fetches release information from the `ruby/ruby` repository on GitHub.
+The `sync_releases.sh` script provides a way to automatically find and add all missing stable releases for implementations that host their releases on GitHub. It currently supports `ruby` and `mruby`.
 
 **Usage:**
 
@@ -41,10 +39,10 @@ To run the script for the default `ruby` implementation:
 $ ./sync_releases.sh
 ```
 
-You can also provide an implementation name as an argument. The script will then pass this name to `update.sh`.
+You can also provide a supported implementation name as an argument. The script will then fetch releases from that implementation's GitHub repository.
 ```bash
-# Example for mruby (note: fetching logic is still for ruby/ruby)
+# Example for mruby
 $ ./sync_releases.sh mruby
 ```
 
-This script is run automatically once a day by the `Sync Ruby Releases` GitHub Action, which will commit any new versions it finds.
+The main `ruby` implementation is synced automatically once a day by the `Sync Ruby Releases` GitHub Action, which will commit any new versions it finds.

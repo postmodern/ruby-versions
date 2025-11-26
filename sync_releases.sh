@@ -2,11 +2,23 @@
 set -e
 
 # The implementation to sync (e.g., "ruby", "mruby"). Defaults to "ruby".
-# This is passed as the first argument to this script.
 IMPLEMENTATION=${1:-ruby}
-# The GitHub repository to check for releases.
-# This is hardcoded for now, as different implementations have different release pages.
-GITHUB_REPO="ruby/ruby"
+GITHUB_REPO=""
+
+# Map the implementation name to a GitHub repository slug.
+case "$IMPLEMENTATION" in
+  ruby)
+    GITHUB_REPO="ruby/ruby"
+    ;;
+  mruby)
+    GITHUB_REPO="mruby/mruby"
+    ;;
+  *)
+    echo "Error: Unknown or unsupported implementation for GitHub release sync: '$IMPLEMENTATION'" >&2
+    echo "This script currently supports 'ruby' and 'mruby'." >&2
+    exit 1
+    ;;
+esac
 
 echo "Syncing implementation: $IMPLEMENTATION"
 echo "Fetching from GitHub repo: $GITHUB_REPO"
