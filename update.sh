@@ -43,7 +43,7 @@ case "$ruby" in
 		;;
 	truffleruby|truffleruby-graalvm)
 		exts=(linux-amd64 linux-aarch64 macos-amd64 macos-aarch64)
-		downloads_url="https://github.com/oracle/truffleruby/releases/download"
+		downloads_url="https://github.com/truffleruby/truffleruby/releases/download"
 		;;
 	*)
 		echo "$0: unknown ruby: $ruby" >&2
