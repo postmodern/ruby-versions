@@ -135,3 +135,7 @@ c40366f53ea98368128d63c802a242cd69a25dd5  truffleruby-24.2.1-macos-aarch64.tar.g
 cba31054d18f73eb72a0ddc9425c9009498eae92  truffleruby-25.0.0-linux-aarch64.tar.gz
 95ac2d2de16775d7c3a171f494aebaff23bbacad  truffleruby-25.0.0-macos-amd64.tar.gz
 7a15711ff63d7ec3f16177b644d46094ab23c028  truffleruby-25.0.0-macos-aarch64.tar.gz
+e6432a5cde2e4c3c60739756a593b20a2780a5d9  truffleruby-33.0.0-linux-amd64.tar.gz
+a621832f0cec62e6b7bd0909674a38efef4178d4  truffleruby-33.0.0-linux-aarch64.tar.gz
+64a43b719f0a2f964ec09b2a14f8c10f6646f066  truffleruby-33.0.0-macos-amd64.tar.gz
+b58ac9a84b225b2d4b5e6cf5143928a5d93d4869  truffleruby-33.0.0-macos-aarch64.tar.gz
