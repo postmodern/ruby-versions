@@ -88,3 +88,7 @@ eb869f13e248b04168e9169804050bd656cebb93  truffleruby-jvm-25.0.0-linux-aarch64.t
 348c2b1ff91947cb2b89ff80e63a62839594356d  truffleruby-jvm-33.0.0-linux-aarch64.tar.gz
 40ac154eee16741ec6385cb9cb1347f578ed0294  truffleruby-jvm-33.0.0-macos-amd64.tar.gz
 3326c02c7ddeafb4068d1f6e665c994dea8a3142  truffleruby-jvm-33.0.0-macos-aarch64.tar.gz
+853eb8b5805553b06a4314ac008f2dfb4575c30a  truffleruby-jvm-33.0.1-linux-amd64.tar.gz
+6649c626285f026faa3fc8c02097eb61580606fc  truffleruby-jvm-33.0.1-linux-aarch64.tar.gz
+00db7f8de9a7381dc4880e0f3b37dd08c9ce65d1  truffleruby-jvm-33.0.1-macos-amd64.tar.gz
+906096d80ebe2e73c741f13573cd948f0ccb76fb  truffleruby-jvm-33.0.1-macos-aarch64.tar.gz
